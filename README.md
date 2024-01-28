@@ -1,5 +1,5 @@
-# Task Manager
-This Task Manager helps you organise your To Do list
+# Focus Forge
+Focus Forge is a task manager that helps you organise your To Do list
 
 ## Prerequisites
 Ensure that you have the following prerequisites installed on your system:
