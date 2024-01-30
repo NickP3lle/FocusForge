@@ -1,4 +1,4 @@
-#include "task.h"
+#include "../headers/task.h"
 
 Task::Task(std::string name, std::string description, bool urgent, bool important)
     : name(name), description(description), urgent(urgent), important(important), completed(false) {}

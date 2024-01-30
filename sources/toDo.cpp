@@ -1,4 +1,4 @@
-#include "toDo.h"
+#include "../headers/toDo.h"
 
 ToDo::PriorityNode::TaskNode::TaskNode(Task *task, TaskNode *next, TaskNode *prev) : task(task), next(next), prev(prev) {}
 

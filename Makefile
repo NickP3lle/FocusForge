@@ -7,10 +7,10 @@ CXXFLAGS = -std=c++17 -Wall -Wextra -pedantic  # Opzioni del compilatore con C++
 TARGET = main.out
 
 # Lista dei file sorgente
-SRCS = main.cpp task.cpp toDo.cpp
+SRCS = main.cpp sources/task.cpp sources/toDo.cpp
 
 # Lista dei file header
-HEADERS = task.h toDo.h
+HEADERS = headers/task.h headers/toDo.h
 
 # Lista dei file oggetto generati dalla compilazione
 OBJS = $(SRCS:.cpp=.o)

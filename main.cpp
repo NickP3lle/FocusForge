@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
 
-#include "task.h"
-#include "toDo.h"
+#include "headers/task.h"
+#include "headers/toDo.h"
 
 int main() {
     Task *task1 = new Task("Task 1", "This is task 1", true, true);
