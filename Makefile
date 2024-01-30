@@ -1,28 +1,28 @@
-# Makefile per compilare main.cpp, task.cpp, toDo.cpp su Mac con processore ARM
+# Makefile to compile the program
 
-CXX = c++        # Compilatore C++ per architettura ARM64 (versione 11 o successiva)
-CXXFLAGS = -std=c++17 -Wall -Wextra -pedantic  # Opzioni del compilatore con C++17
+CXX = c++        # C++ compiler (version 11	or greater)
+CXXFLAGS = -std=c++17 -Wall -Wextra -pedantic  # Options compiler C++17
 
-# Nome dell'eseguibile
+# Name of the executable
 TARGET = main.out
 
-# Lista dei file sorgente
-SRCS = main.cpp sources/task.cpp sources/toDo.cpp
+# List of source files
+SRCS = main.cpp sources/task.cpp sources/focusForge.cpp
 
-# Lista dei file header
-HEADERS = headers/task.h headers/toDo.h
+# List of header files
+HEADERS = headers/task.h headers/focusForge.h
 
-# Lista dei file oggetto generati dalla compilazione
+# List of object files
 OBJS = $(SRCS:.cpp=.o)
 
-# Regola per la compilazione dell'eseguibile
+# Rule to link the program
 $(TARGET): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS)
 
-# Regola per la compilazione dei file oggetto
+# Rule to compile the source files
 %.o: %.cpp $(HEADERS)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-# Pulizia dei file oggetto e dell'eseguibile
+# Clean the directory
 clean:
 	rm -f $(OBJS) $(TARGET)

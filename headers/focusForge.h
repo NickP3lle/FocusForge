@@ -34,11 +34,9 @@ class FocusForge {
     FocusForge &operator=(const FocusForge &other) = delete;
 
     void addTask(Task *t);
-    PriorityNode::TaskNode *getNode(Task *t) const;
-    // Task *getTask(std::string name) const;
-    void *removeNode(PriorityNode::TaskNode *t);
-    void addNode(PriorityNode::TaskNode *t);
-    void completeTask(Task *t) const;
+    PriorityNode::TaskNode *removeNode(Task *t);
+    bool completeTask(Task *t);
+    bool uncompleteTask(Task *t);
 
     // operator<< overload
     friend std::ostream &operator<<(std::ostream &out, const PriorityNode &priorityNode);

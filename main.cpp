@@ -31,5 +31,12 @@ int main() {
 
     std::cout << focusForge << std::endl;
 
+    focusForge.completeTask(task1);
+    focusForge.completeTask(task1);
+    focusForge.uncompleteTask(task1);
+    focusForge.uncompleteTask(task1);
+
+    std::cout << focusForge << std::endl;
+
     return 0;
 }
