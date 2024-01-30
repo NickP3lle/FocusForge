@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
 
+#include "headers/focusForge.h"
 #include "headers/task.h"
-#include "headers/toDo.h"
 
 int main() {
     Task *task1 = new Task("Task 1", "This is task 1", true, true);
@@ -16,20 +16,20 @@ int main() {
     Task *task9 = new Task("Task 9", "This is task 9", true, true);
     Task *task10 = new Task("Task 10", "This is task 10", false, true);
 
-    ToDo toDo;
+    FocusForge focusForge;
 
-    toDo.addTask(task1);
-    toDo.addTask(task2);
-    toDo.addTask(task3);
-    toDo.addTask(task4);
-    toDo.addTask(task5);
-    toDo.addTask(task6);
-    toDo.addTask(task7);
-    toDo.addTask(task8);
-    toDo.addTask(task9);
-    toDo.addTask(task10);
+    focusForge.addTask(task1);
+    focusForge.addTask(task2);
+    focusForge.addTask(task3);
+    focusForge.addTask(task4);
+    focusForge.addTask(task5);
+    focusForge.addTask(task6);
+    focusForge.addTask(task7);
+    focusForge.addTask(task8);
+    focusForge.addTask(task9);
+    focusForge.addTask(task10);
 
-    std::cout << toDo << std::endl;
+    std::cout << focusForge << std::endl;
 
     return 0;
 }

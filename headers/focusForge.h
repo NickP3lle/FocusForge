@@ -2,9 +2,9 @@
 
 #include "task.h"
 
-#define PRIORITY_COUNT 4
+#define PRIORITY_COUNT 5
 
-class ToDo {
+class FocusForge {
   private:
     class PriorityNode {
       public:
@@ -20,20 +20,18 @@ class ToDo {
         TaskNode *head;
         TaskNode *tail;
 
-        PriorityNode *next;
-        PriorityNode *prev;
-        PriorityNode(short int priority, PriorityNode *next = nullptr, PriorityNode *prev = nullptr);
+        PriorityNode(short int priority);
         ~PriorityNode();
+
+        void addNode(TaskNode *t);
     };
 
-    PriorityNode *head;
-    PriorityNode *tail;
+    PriorityNode priorityType[PRIORITY_COUNT];
 
   public:
-    ToDo();
-    ~ToDo();
-    ToDo(const ToDo &other) = delete;
-    ToDo &operator=(const ToDo &other) = delete;
+    FocusForge();
+    FocusForge(const FocusForge &other) = delete;
+    FocusForge &operator=(const FocusForge &other) = delete;
 
     void addTask(Task *t);
     PriorityNode::TaskNode *getNode(Task *t) const;
@@ -43,7 +41,10 @@ class ToDo {
     void completeTask(Task *t) const;
 
     // operator<< overload
-    friend std::ostream &operator<<(std::ostream &out, const ToDo &toDo);
+    friend std::ostream &operator<<(std::ostream &out, const PriorityNode &priorityNode);
+    friend std::ostream &operator<<(std::ostream &out, const FocusForge &focusForge);
 };
 
-std::ostream &operator<<(std::ostream &out, const ToDo &toDo);
+std::ostream &operator<<(std::ostream &out, const FocusForge::PriorityNode &priorityNode);
+
+std::ostream &operator<<(std::ostream &out, const FocusForge &focusForge);
